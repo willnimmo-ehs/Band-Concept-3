@@ -6,7 +6,7 @@
   <title>San Diego Concert Band</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400;1,600&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400;1,600&family=Jost:wght@300;400;500&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
@@ -28,6 +28,7 @@
         <li><a href="#concerts">Concerts</a></li>
         <li><a href="#about">The Band</a></li>
         <li><a href="#music">Music</a></li>
+        <li><a href="#orchestra">Orchestra</a></li>
         <li><a href="#conductor">Conductor</a></li>
         <li><a href="#join">Join</a></li>
         <li><a href="#support">Support</a></li>
@@ -39,6 +40,7 @@
         <li><a href="#concerts">Concerts</a></li>
         <li><a href="#about">The Band</a></li>
         <li><a href="#music">Music</a></li>
+        <li><a href="#orchestra">Orchestra</a></li>
         <li><a href="#conductor">Conductor</a></li>
         <li><a href="#join">Join</a></li>
         <li><a href="#support">Support</a></li>
@@ -61,6 +63,15 @@
            I — HERO
            ══════════════════════════════ -->
       <section class="score-section hero-section" id="hero">
+        <!-- Ken Burns background -->
+        <div class="hero-bg" aria-hidden="true">
+          <img src="band/2band3.jpg"
+               alt=""
+               class="hero-bg-img"
+               loading="eager" />
+          <div class="hero-bg-overlay"></div>
+        </div>
+
         <div class="hero-inner">
           <div class="hero-text">
             <p class="score-label reveal-fade" style="animation-delay:.05s">
@@ -76,11 +87,6 @@
             <div class="hero-ctas reveal-fade" style="animation-delay:.52s">
               <a href="#concerts" class="btn-primary">Upcoming Concerts</a>
               <a href="#join" class="btn-ghost">Join the Band</a>
-            </div>
-          </div>
-          <div class="hero-visual reveal-fade" style="animation-delay:.3s">
-            <div class="photo-frame hero-photo-frame">
-              <img src="band/2band3.jpg" alt="San Diego Concert Band performing in concert" loading="eager" />
             </div>
           </div>
         </div>
@@ -267,10 +273,139 @@
       </section>
 
       <!-- ══════════════════════════════
-           V — THE CONDUCTOR
+           V — ORCHESTRAL INSTRUMENTS
+           ══════════════════════════════ -->
+      <section class="score-section orchestra-section" id="orchestra">
+        <span class="rehearsal-mark" aria-hidden="true">V</span>
+        <p class="score-label">— The Voice of Each Section —</p>
+        <h2 class="score-heading">The Orchestra</h2>
+
+        <!-- Audio permission modal (shown once) -->
+        <div class="orch-modal" id="orch-modal" role="dialog" aria-modal="true" aria-labelledby="orch-modal-title" aria-hidden="true">
+          <div class="orch-modal-box">
+            <span class="orch-modal-clef" aria-hidden="true">𝄞</span>
+            <h3 class="orch-modal-title" id="orch-modal-title">This section plays live music</h3>
+            <p class="orch-modal-body">As you scroll through each instrument family, synthesized music fades in — crafted in real time by your browser. No audio files, no streaming.</p>
+            <div class="orch-modal-actions">
+              <button class="btn-primary" id="orch-allow">Enable Audio</button>
+              <button class="btn-ghost" id="orch-deny">Continue Without Sound</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Global mute toggle (visible while in section) -->
+        <button class="orch-mute-btn" id="orch-mute" aria-label="Mute orchestra audio" aria-pressed="false" hidden>
+          <svg class="orch-mute-icon orch-mute-on" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="22" height="22" aria-hidden="true">
+            <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/>
+            <path d="M15.54 8.46a5 5 0 0 1 0 7.07"/>
+            <path d="M19.07 4.93a10 10 0 0 1 0 14.14"/>
+          </svg>
+          <svg class="orch-mute-icon orch-mute-off" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="22" height="22" aria-hidden="true">
+            <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/>
+            <line x1="23" y1="9" x2="17" y2="15"/>
+            <line x1="17" y1="9" x2="23" y2="15"/>
+          </svg>
+          <span class="orch-mute-lbl">Mute</span>
+        </button>
+
+        <!-- ── PANEL 1: STRINGS ── -->
+        <div class="orch-panel" id="orch-strings" data-instrument="strings">
+          <div class="orch-panel-bg" style="--orch-accent:#c9a84c"></div>
+          <div class="orch-panel-content">
+            <div class="orch-text-col">
+              <p class="orch-family-label">I.</p>
+              <h3 class="orch-family-name">Strings</h3>
+              <p class="orch-family-sub">Barber — Adagio for Strings</p>
+              <p class="orch-family-desc">From the burnished warmth of the cellos to the luminous shimmer of the violins, strings carry the harmonic heart of the orchestra — soaring, sighing, sustaining.</p>
+            </div>
+            <div class="orch-staff-col">
+              <svg class="orch-staff-svg" id="staff-strings" viewBox="0 0 560 160" preserveAspectRatio="xMidYMid meet" aria-hidden="true"></svg>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── PANEL 2: WOODWINDS ── -->
+        <div class="orch-panel" id="orch-woodwinds" data-instrument="woodwinds">
+          <div class="orch-panel-bg" style="--orch-accent:#8fc4b0"></div>
+          <div class="orch-panel-content">
+            <div class="orch-text-col">
+              <p class="orch-family-label">II.</p>
+              <h3 class="orch-family-name">Woodwinds</h3>
+              <p class="orch-family-sub">Debussy — Prélude à l'après-midi d'un faune</p>
+              <p class="orch-family-desc">Flutes, oboes, clarinets, and bassoons — each with a distinct colour. Together they weave pastoral lines and singing countermelodies through the orchestral fabric.</p>
+            </div>
+            <div class="orch-staff-col">
+              <svg class="orch-staff-svg" id="staff-woodwinds" viewBox="0 0 560 160" preserveAspectRatio="xMidYMid meet" aria-hidden="true"></svg>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── PANEL 3: BRASS ── -->
+        <div class="orch-panel" id="orch-brass" data-instrument="brass">
+          <div class="orch-panel-bg" style="--orch-accent:#d4956a"></div>
+          <div class="orch-panel-content">
+            <div class="orch-text-col">
+              <p class="orch-family-label">III.</p>
+              <h3 class="orch-family-name">Brass</h3>
+              <p class="orch-family-sub">Copland — Fanfare for the Common Man</p>
+              <p class="orch-family-desc">Horns, trumpets, trombones, and tuba. When the brass breathe together the hall shakes. They punctuate, they announce, they roar — and in quiet passages, they sing with a beauty that surprises.</p>
+            </div>
+            <div class="orch-staff-col">
+              <svg class="orch-staff-svg" id="staff-brass" viewBox="0 0 560 160" preserveAspectRatio="xMidYMid meet" aria-hidden="true"></svg>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── PANEL 4: PERCUSSION ── -->
+        <div class="orch-panel" id="orch-percussion" data-instrument="percussion">
+          <div class="orch-panel-bg" style="--orch-accent:#a89880"></div>
+          <div class="orch-panel-content">
+            <div class="orch-text-col">
+              <p class="orch-family-label">IV.</p>
+              <h3 class="orch-family-name">Percussion</h3>
+              <p class="orch-family-sub">Ravel — Bolero</p>
+              <p class="orch-family-desc">Timpani, snare, cymbals, marimba. The skeleton of rhythm and the architecture of climax. Percussion transforms an ensemble into an event.</p>
+            </div>
+            <div class="orch-staff-col">
+              <svg class="orch-staff-svg" id="staff-percussion" viewBox="0 0 560 160" preserveAspectRatio="xMidYMid meet" aria-hidden="true"></svg>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── PANEL 5: THE UNION ── -->
+        <div class="orch-panel orch-panel--union" id="orch-union" data-instrument="union">
+          <div class="orch-panel-bg" style="--orch-accent:#c9a84c"></div>
+
+          <!-- Full-bleed canvas: waveform rivers + particle constellation -->
+          <canvas id="union-canvas" class="union-canvas" aria-hidden="true"></canvas>
+
+          <!-- Gold flash overlay for the climax moment -->
+          <div id="union-flash" class="union-flash" aria-hidden="true"></div>
+
+          <div class="orch-panel-content orch-panel-content--union">
+            <div class="orch-text-col">
+              <p class="orch-family-label" style="font-size:1.1rem;letter-spacing:.3em;">✦</p>
+              <h3 class="orch-family-name orch-union-name">The Union</h3>
+              <p class="orch-family-sub">All voices, one sound</p>
+              <p class="orch-family-desc">Barber. Debussy. Copland. Ravel. Four masterworks, four families, one breath. When every section plays together the result transcends any single instrument.</p>
+            </div>
+            <div class="orch-staff-col orch-union-canvas-col">
+              <!-- Typography reveal (fades in at 10s) -->
+              <div class="union-text" id="union-text">
+                <p class="union-text-main">One Voice</p>
+                <p class="union-text-sub">60 musicians. 4 families. One symphony.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+      <!-- ══════════════════════════════
+           VI — THE CONDUCTOR
            ══════════════════════════════ -->
       <section class="score-section" id="conductor">
-        <span class="rehearsal-mark" aria-hidden="true">V</span>
+        <span class="rehearsal-mark" aria-hidden="true">VI</span>
         <div class="conductor-layout">
           <div class="conductor-photo-col anim-left">
             <div class="photo-frame">
@@ -291,7 +426,7 @@
            VI — JOIN
            ══════════════════════════════ -->
       <section class="score-section join-section" id="join">
-        <span class="rehearsal-mark" aria-hidden="true">VI</span>
+        <span class="rehearsal-mark" aria-hidden="true">VII</span>
         <img src="band/2band7.jpg" alt="" class="join-bg" aria-hidden="true" loading="lazy" />
         <div class="join-overlay" aria-hidden="true"></div>
         <div class="join-content">
@@ -317,7 +452,7 @@
            VII — SUPPORT
            ══════════════════════════════ -->
       <section class="score-section" id="support">
-        <span class="rehearsal-mark" aria-hidden="true">VII</span>
+        <span class="rehearsal-mark" aria-hidden="true">VIII</span>
         <p class="score-label">— Keep the Music Playing —</p>
         <h2 class="score-heading">Support the Band</h2>
 
@@ -388,5 +523,6 @@
   <script src="js/canvas.js"></script>
   <script src="js/scroll.js"></script>
   <script src="js/main.js"></script>
+  <script src="js/orchestra.js" defer></script>
 </body>
 </html>
