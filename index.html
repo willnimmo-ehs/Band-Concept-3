@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>San Diego Concert Band</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400;1,600&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- Fixed full-page background: drifting score notation -->
+  <canvas id="bg-canvas" aria-hidden="true"></canvas>
+
+  <!-- ── NAVBAR ─────────────────────────────────────────────── -->
+  <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a class="nav-brand" href="#hero" aria-label="San Diego Concert Band home">
+        <span class="nav-clef" aria-hidden="true">𝄞</span>
+        <span class="nav-name">San Diego Concert Band</span>
+      </a>
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="#concerts">Concerts</a></li>
+        <li><a href="#about">The Band</a></li>
+        <li><a href="#music">Music</a></li>
+        <li><a href="#conductor">Conductor</a></li>
+        <li><a href="#join">Join</a></li>
+        <li><a href="#support">Support</a></li>
+      </ul>
+    </div>
+    <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+      <button class="mobile-close" id="mobile-close" aria-label="Close menu">&times;</button>
+      <ul>
+        <li><a href="#concerts">Concerts</a></li>
+        <li><a href="#about">The Band</a></li>
+        <li><a href="#music">Music</a></li>
+        <li><a href="#conductor">Conductor</a></li>
+        <li><a href="#join">Join</a></li>
+        <li><a href="#support">Support</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ── 3-COLUMN SCORE LAYOUT ──────────────────────────────── -->
+  <div class="score-layout">
+
+    <!-- Left animated staff panel -->
+    <aside class="staff-panel staff-panel--left" aria-hidden="true">
+      <canvas id="panel-left"></canvas>
+    </aside>
+
+    <!-- Center: all content -->
+    <main class="score-main">
+
+      <!-- ══════════════════════════════
+           I — HERO
+           ══════════════════════════════ -->
+      <section class="score-section hero-section" id="hero">
+        <div class="hero-inner">
+          <div class="hero-text">
+            <p class="score-label reveal-fade" style="animation-delay:.05s">
+              — Performing Throughout San Diego Since 1989 —
+            </p>
+            <h1 class="hero-title">
+              <span class="hero-line reveal-up" style="animation-delay:.1s">The San Diego</span>
+              <span class="hero-line reveal-up" style="animation-delay:.22s">Concert Band</span>
+            </h1>
+            <p class="hero-sub reveal-fade" style="animation-delay:.38s">
+              Symphonic Band &middot; Marches &middot; Show Tunes
+            </p>
+            <div class="hero-ctas reveal-fade" style="animation-delay:.52s">
+              <a href="#concerts" class="btn-primary">Upcoming Concerts</a>
+              <a href="#join" class="btn-ghost">Join the Band</a>
+            </div>
+          </div>
+          <div class="hero-visual reveal-fade" style="animation-delay:.3s">
+            <div class="photo-frame hero-photo-frame">
+              <img src="band/2band3.jpg" alt="San Diego Concert Band performing in concert" loading="eager" />
+            </div>
+          </div>
+        </div>
+        <div class="hero-scroll-cue" aria-hidden="true">
+          <div class="scroll-stem"></div>
+          <span>scroll</span>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════
+           II — UPCOMING CONCERTS
+           ══════════════════════════════ -->
+      <section class="score-section" id="concerts">
+        <span class="rehearsal-mark" aria-hidden="true">II</span>
+        <p class="score-label">— Upcoming Performances —</p>
+        <h2 class="score-heading">Tonight's Program</h2>
+
+        <div class="concert-grid">
+
+          <article class="concert-card anim-up" style="--i:0">
+            <div class="concert-date">
+              <span class="cdate-day">18</span>
+              <span class="cdate-month">May</span>
+            </div>
+            <div class="concert-body">
+              <h3 class="concert-title">Spring Spectacular</h3>
+              <p class="concert-venue">East County Performing Arts Center</p>
+              <p class="concert-time">3:00 PM</p>
+              <p class="concert-desc">An afternoon of symphonic favorites, rousing marches, and beloved Broadway showstoppers.</p>
+            </div>
+          </article>
+
+          <article class="concert-card anim-up" style="--i:1">
+            <div class="concert-date">
+              <span class="cdate-day">22</span>
+              <span class="cdate-month">Jun</span>
+            </div>
+            <div class="concert-body">
+              <h3 class="concert-title">Twilight in the Park</h3>
+              <p class="concert-venue">Balboa Park Organ Pavilion</p>
+              <p class="concert-time">6:15 PM</p>
+              <p class="concert-desc">Our beloved summer tradition under the open sky of Balboa Park.</p>
+            </div>
+          </article>
+
+          <article class="concert-card anim-up" style="--i:2">
+            <div class="concert-date">
+              <span class="cdate-day">29</span>
+              <span class="cdate-month">Jun</span>
+            </div>
+            <div class="concert-body">
+              <h3 class="concert-title">Independence Day</h3>
+              <p class="concert-venue">St. Dunstan's Church, San Carlos</p>
+              <p class="concert-time">2:00 PM</p>
+              <p class="concert-desc">Patriotic marches and Americana classics to kick off the Fourth of July weekend.</p>
+            </div>
+          </article>
+
+          <article class="concert-card anim-up" style="--i:3">
+            <div class="concert-date">
+              <span class="cdate-day">3</span>
+              <span class="cdate-month">Aug</span>
+            </div>
+            <div class="concert-body">
+              <h3 class="concert-title">Summer Pops</h3>
+              <p class="concert-venue">Poway Community Park</p>
+              <p class="concert-time">6:00 PM</p>
+              <p class="concert-desc">A casual evening of crowd favorites — bring a blanket and enjoy the music.</p>
+            </div>
+          </article>
+
+          <article class="concert-card anim-up" style="--i:4">
+            <div class="concert-date">
+              <span class="cdate-day">13</span>
+              <span class="cdate-month">Dec</span>
+            </div>
+            <div class="concert-body">
+              <h3 class="concert-title">Holiday Concert</h3>
+              <p class="concert-venue">Joan B. Kroc Theater</p>
+              <p class="concert-time">3:00 PM</p>
+              <p class="concert-desc">The band's beloved annual holiday tradition, featuring seasonal classics and festive fanfares.</p>
+            </div>
+          </article>
+
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════
+           III — THE BAND
+           ══════════════════════════════ -->
+      <section class="score-section" id="about">
+        <span class="rehearsal-mark" aria-hidden="true">III</span>
+        <p class="score-label">— About the Ensemble —</p>
+        <h2 class="score-heading">Nearly 100 Strong</h2>
+
+        <div class="about-layout">
+          <div class="about-text anim-left">
+            <p class="about-body">Founded in 1989 as the La Mesa Community Band, the San Diego Concert Band has grown into one of Southern California's premier community ensembles — nearly 100 musicians drawn from every corner of life: educators, engineers, doctors, pilots, attorneys, nurses, college students, and active Navy and Marine Corps musicians.</p>
+            <p class="about-body">We perform throughout San Diego County and have taken our music to international stages. No audition is required — from novice to professional, every musician is welcome. The band is supported entirely by member dues, sponsorships, and individual donations.</p>
+            <div class="stat-row">
+              <div class="stat-block">
+                <div class="stat-num-wrap">
+                  <span class="stat-num" data-target="35">0</span><span class="stat-plus">+</span>
+                </div>
+                <span class="stat-lbl">Years Performing</span>
+              </div>
+              <div class="stat-block">
+                <div class="stat-num-wrap">
+                  <span class="stat-tilde">~</span><span class="stat-num" data-target="100">0</span>
+                </div>
+                <span class="stat-lbl">Musicians</span>
+              </div>
+              <div class="stat-block">
+                <div class="stat-num-wrap">
+                  <span class="stat-num" data-target="0">0</span>
+                </div>
+                <span class="stat-lbl">Auditions Required</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-mosaic anim-right">
+            <div class="mosaic-grid">
+              <div class="mosaic-cell mosaic-tall">
+                <img src="band/BrassSections.jpg" alt="Brass sections" loading="lazy" />
+                <span class="mosaic-lbl">Brass</span>
+              </div>
+              <div class="mosaic-cell">
+                <img src="band/Clarinets2.jpg" alt="Clarinet section" loading="lazy" />
+                <span class="mosaic-lbl">Clarinets</span>
+              </div>
+              <div class="mosaic-cell">
+                <img src="band/saxes.jpg" alt="Saxophone section" loading="lazy" />
+                <span class="mosaic-lbl">Saxophones</span>
+              </div>
+              <div class="mosaic-cell">
+                <img src="band/trumpets.jpg" alt="Trumpet section" loading="lazy" />
+                <span class="mosaic-lbl">Trumpets</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <figure class="pull-quote anim-up" style="--i:0">
+          <blockquote>"Music is the shorthand of emotion."</blockquote>
+          <figcaption>— Roy Anthony Jr., Music Director</figcaption>
+        </figure>
+      </section>
+
+      <!-- ══════════════════════════════
+           IV — THE MUSIC
+           ══════════════════════════════ -->
+      <section class="score-section" id="music">
+        <span class="rehearsal-mark" aria-hidden="true">IV</span>
+        <p class="score-label">— What We Play —</p>
+        <h2 class="score-heading">The Music</h2>
+
+        <div class="genre-list">
+          <div class="genre-entry anim-up" style="--i:0">
+            <span class="genre-glyph" aria-hidden="true">𝄞</span>
+            <div class="genre-info">
+              <h3 class="genre-name">Symphonic Band</h3>
+              <p class="genre-sub">Grand orchestral works for concert band</p>
+              <p class="genre-desc">From Holst to Grainger, performed with precision and power. The backbone of every concert season — rich, expansive, and alive.</p>
+            </div>
+          </div>
+          <div class="genre-entry anim-up" style="--i:1">
+            <span class="genre-glyph" aria-hidden="true">♩</span>
+            <div class="genre-info">
+              <h3 class="genre-name">Marches</h3>
+              <p class="genre-sub">The pulse of tradition</p>
+              <p class="genre-desc">From Sousa to King, we carry the march forward with pride. Crisp, disciplined, undeniable. The crowd always stands.</p>
+            </div>
+          </div>
+          <div class="genre-entry anim-up" style="--i:2">
+            <span class="genre-glyph" aria-hidden="true">♫</span>
+            <div class="genre-info">
+              <h3 class="genre-name">Show Tunes</h3>
+              <p class="genre-sub">The Great American Songbook</p>
+              <p class="genre-desc">Broadway's finest, reimagined for full concert band. The most beloved melodies from the stage, played with heart.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════
+           V — THE CONDUCTOR
+           ══════════════════════════════ -->
+      <section class="score-section" id="conductor">
+        <span class="rehearsal-mark" aria-hidden="true">V</span>
+        <div class="conductor-layout">
+          <div class="conductor-photo-col anim-left">
+            <div class="photo-frame">
+              <img src="band/Roy.jpg" alt="Roy Anthony Jr., Music Director" loading="lazy" />
+            </div>
+          </div>
+          <div class="conductor-bio-col anim-right">
+            <p class="score-label">— Music Director —</p>
+            <h2 class="conductor-name">Roy Anthony Jr.</h2>
+            <div class="gold-rule"></div>
+            <p class="conductor-sub"><em>At the podium since the beginning</em></p>
+            <p class="conductor-bio">Roy Anthony Jr. has led the San Diego Concert Band for decades, bringing artistic vision and community spirit to every performance. A veteran music educator and conductor, he has directed district and community honor bands, served as conductor of the San Diego Civic Youth Orchestra, and guided the band from 50 members to nearly 100. Under his baton, the band has become one of Southern California's premier concert bands.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════
+           VI — JOIN
+           ══════════════════════════════ -->
+      <section class="score-section join-section" id="join">
+        <span class="rehearsal-mark" aria-hidden="true">VI</span>
+        <img src="band/2band7.jpg" alt="" class="join-bg" aria-hidden="true" loading="lazy" />
+        <div class="join-overlay" aria-hidden="true"></div>
+        <div class="join-content">
+          <p class="score-label">— There's a Chair for You —</p>
+          <h2 class="score-heading join-heading">Play With Us</h2>
+          <p class="join-body">No auditions. No barriers. Just a love of music. The San Diego Concert Band welcomes musicians of all backgrounds and skill levels. If you play a band instrument, there is a chair waiting for you.</p>
+          <div class="rehearsal-info">
+            <div class="reh-item">
+              <span class="reh-lbl">Rehearsals</span>
+              <span class="reh-val">Monday evenings &middot; 7:00 PM</span>
+            </div>
+            <div class="reh-divider" aria-hidden="true">♩</div>
+            <div class="reh-item">
+              <span class="reh-lbl">Location</span>
+              <span class="reh-val">East County Area &middot; San Diego</span>
+            </div>
+          </div>
+          <a href="mailto:SDCB@cox.net" class="btn-primary btn-large">Get in Touch</a>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════
+           VII — SUPPORT
+           ══════════════════════════════ -->
+      <section class="score-section" id="support">
+        <span class="rehearsal-mark" aria-hidden="true">VII</span>
+        <p class="score-label">— Keep the Music Playing —</p>
+        <h2 class="score-heading">Support the Band</h2>
+
+        <div class="support-grid">
+          <div class="support-card anim-up" style="--i:0">
+            <span class="support-dyn" aria-label="forte">f</span>
+            <h3 class="support-title">Attend a Concert</h3>
+            <p class="support-desc">Your ticket directly supports the music. Come, bring friends, and enjoy an evening with San Diego's premier community band.</p>
+          </div>
+          <div class="support-card anim-up" style="--i:1">
+            <span class="support-dyn" aria-label="fortissimo">ff</span>
+            <h3 class="support-title">Make a Donation</h3>
+            <p class="support-desc">Every gift keeps the music playing. The band is entirely community-supported — your generosity matters deeply.</p>
+          </div>
+          <div class="support-card anim-up" style="--i:2">
+            <span class="support-dyn" aria-label="triple forte">fff</span>
+            <h3 class="support-title">Corporate Sponsorship</h3>
+            <p class="support-desc">Partner with San Diego's premier concert band. Sponsorship opportunities available for businesses of all sizes.</p>
+          </div>
+        </div>
+
+        <p class="mailing-address">San Diego Concert Band &middot; PO Box 711534 &middot; Santee, CA 92071</p>
+      </section>
+
+    </main>
+
+    <!-- Right animated staff panel -->
+    <aside class="staff-panel staff-panel--right" aria-hidden="true">
+      <canvas id="panel-right"></canvas>
+    </aside>
+
+  </div><!-- /.score-layout -->
+
+  <!-- ── FOOTER ────────────────────────────────────────────── -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-bar" aria-hidden="true"></div>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span class="footer-clef" aria-hidden="true">𝄞</span>
+        <div>
+          <span class="footer-name">San Diego Concert Band</span>
+          <span class="footer-tagline">Performing throughout San Diego since 1989</span>
+        </div>
+      </div>
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <a href="#concerts">Concerts</a>
+        <a href="#about">The Band</a>
+        <a href="#music">Music</a>
+        <a href="#conductor">Conductor</a>
+        <a href="#join">Join</a>
+        <a href="#support">Support</a>
+      </nav>
+      <div class="footer-contact">
+        <a href="mailto:SDCB@cox.net" class="footer-email">SDCB@cox.net</a>
+        <div class="footer-icons">
+          <a href="#" aria-label="Facebook" class="footer-icon">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+          <a href="#" aria-label="YouTube" class="footer-icon">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20" aria-hidden="true"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 1.96A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.95A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon fill="#080808" points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copy">&copy; 2026 The San Diego Concert Band &middot; All Rights Reserved</div>
+  </footer>
+
+  <script src="js/canvas.js"></script>
+  <script src="js/scroll.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
