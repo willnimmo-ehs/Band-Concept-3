@@ -1,22 +1,22 @@
-<!DOCTYPE html>
-<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+Here it is — select all of this, copy it, and paste it directly into the GitHub editor:
+html<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>San Diego Concert Band</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com/">
-  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
-  <link href="./San Diego Concert Band html_files/css2" rel="stylesheet">
-  <link rel="stylesheet" href="file:///C:/Users/william.nimmo/Downloads/css/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400;1,600&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
 
-  <!-- Fixed full-page background: drifting score notation -->
   <canvas id="bg-canvas" aria-hidden="true"></canvas>
 
-  <!-- ── NAVBAR ─────────────────────────────────────────────── -->
   <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
     <div class="nav-inner">
-      <a class="nav-brand" href="file:///C:/Users/william.nimmo/Downloads/index_1.html#hero" aria-label="San Diego Concert Band home">
+      <a class="nav-brand" href="#hero" aria-label="San Diego Concert Band home">
         <span class="nav-clef" aria-hidden="true">𝄞</span>
         <span class="nav-name">San Diego Concert Band</span>
       </a>
@@ -24,41 +24,35 @@
         <span></span><span></span><span></span>
       </button>
       <ul class="nav-links">
-        <li><a href="file:///C:/Users/william.nimmo/Downloads/index_1.html#concerts">Concerts</a></li>
-        <li><a href="file:///C:/Users/william.nimmo/Downloads/index_1.html#about">The Band</a></li>
-        <li><a href="file:///C:/Users/william.nimmo/Downloads/index_1.html#music">Music</a></li>
-        <li><a href="file:///C:/Users/william.nimmo/Downloads/index_1.html#conductor">Conductor</a></li>
-        <li><a href="file:///C:/Users/william.nimmo/Downloads/index_1.html#join">Join</a></li>
-        <li><a href="file:///C:/Users/william.nimmo/Downloads/index_1.html#support">Support</a></li>
+        <li><a href="#concerts">Concerts</a></li>
+        <li><a href="#about">The Band</a></li>
+        <li><a href="#music">Music</a></li>
+        <li><a href="#conductor">Conductor</a></li>
+        <li><a href="#join">Join</a></li>
+        <li><a href="#support">Support</a></li>
       </ul>
     </div>
     <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
-      <button class="mobile-close" id="mobile-close" aria-label="Close menu">×</button>
+      <button class="mobile-close" id="mobile-close" aria-label="Close menu">&times;</button>
       <ul>
-        <li><a href="file:///C:/Users/william.nimmo/Downloads/index_1.html#concerts">Concerts</a></li>
-        <li><a href="file:///C:/Users/william.nimmo/Downloads/index_1.html#about">The Band</a></li>
-        <li><a href="file:///C:/Users/william.nimmo/Downloads/index_1.html#music">Music</a></li>
-        <li><a href="file:///C:/Users/william.nimmo/Downloads/index_1.html#conductor">Conductor</a></li>
-        <li><a href="file:///C:/Users/william.nimmo/Downloads/index_1.html#join">Join</a></li>
-        <li><a href="file:///C:/Users/william.nimmo/Downloads/index_1.html#support">Support</a></li>
+        <li><a href="#concerts">Concerts</a></li>
+        <li><a href="#about">The Band</a></li>
+        <li><a href="#music">Music</a></li>
+        <li><a href="#conductor">Conductor</a></li>
+        <li><a href="#join">Join</a></li>
+        <li><a href="#support">Support</a></li>
       </ul>
     </div>
   </nav>
 
-  <!-- ── 3-COLUMN SCORE LAYOUT ──────────────────────────────── -->
   <div class="score-layout">
 
-    <!-- Left animated staff panel -->
     <aside class="staff-panel staff-panel--left" aria-hidden="true">
       <canvas id="panel-left"></canvas>
     </aside>
 
-    <!-- Center: all content -->
     <main class="score-main">
 
-      <!-- ══════════════════════════════
-           I — HERO
-           ══════════════════════════════ -->
       <section class="score-section hero-section" id="hero">
         <div class="hero-inner">
           <div class="hero-text">
@@ -70,16 +64,16 @@
               <span class="hero-line reveal-up" style="animation-delay:.22s">Concert Band</span>
             </h1>
             <p class="hero-sub reveal-fade" style="animation-delay:.38s">
-              Symphonic Band · Marches · Show Tunes
+              Symphonic Band &middot; Marches &middot; Show Tunes
             </p>
             <div class="hero-ctas reveal-fade" style="animation-delay:.52s">
-              <a href="file:///C:/Users/william.nimmo/Downloads/index_1.html#concerts" class="btn-primary">Upcoming Concerts</a>
-              <a href="file:///C:/Users/william.nimmo/Downloads/index_1.html#join" class="btn-ghost">Join the Band</a>
+              <a href="#concerts" class="btn-primary">Upcoming Concerts</a>
+              <a href="#join" class="btn-ghost">Join the Band</a>
             </div>
           </div>
           <div class="hero-visual reveal-fade" style="animation-delay:.3s">
             <div class="photo-frame hero-photo-frame">
-              <img src="file:///C:/Users/william.nimmo/Downloads/band/2band3.jpg" alt="San Diego Concert Band performing in concert" loading="eager">
+              <img src="band/2band3.jpg" alt="San Diego Concert Band performing in concert" loading="eager" />
             </div>
           </div>
         </div>
@@ -89,9 +83,6 @@
         </div>
       </section>
 
-      <!-- ══════════════════════════════
-           II — UPCOMING CONCERTS
-           ══════════════════════════════ -->
       <section class="score-section" id="concerts">
         <span class="rehearsal-mark" aria-hidden="true">II</span>
         <p class="score-label">— Upcoming Performances —</p>
@@ -193,9 +184,6 @@
         </div>
       </section>
 
-      <!-- ══════════════════════════════
-           III — THE BAND
-           ══════════════════════════════ -->
       <section class="score-section" id="about">
         <span class="rehearsal-mark" aria-hidden="true">III</span>
         <p class="score-label">— About the Ensemble —</p>
@@ -224,19 +212,19 @@
           <div class="about-mosaic anim-right">
             <div class="mosaic-grid">
               <div class="mosaic-cell mosaic-tall">
-                <img src="file:///C:/Users/william.nimmo/Downloads/band/BrassSections.jpg" alt="Brass sections" loading="lazy">
+                <img src="band/BrassSections.jpg" alt="Brass sections" loading="lazy" />
                 <span class="mosaic-lbl">Brass</span>
               </div>
               <div class="mosaic-cell">
-                <img src="file:///C:/Users/william.nimmo/Downloads/band/Clarinets2.jpg" alt="Clarinet section" loading="lazy">
+                <img src="band/Clarinets2.jpg" alt="Clarinet section" loading="lazy" />
                 <span class="mosaic-lbl">Clarinets</span>
               </div>
               <div class="mosaic-cell">
-                <img src="file:///C:/Users/william.nimmo/Downloads/band/saxes.jpg" alt="Saxophone section" loading="lazy">
+                <img src="band/saxes.jpg" alt="Saxophone section" loading="lazy" />
                 <span class="mosaic-lbl">Saxophones</span>
               </div>
               <div class="mosaic-cell">
-                <img src="file:///C:/Users/william.nimmo/Downloads/band/trumpets.jpg" alt="Trumpet section" loading="lazy">
+                <img src="band/trumpets.jpg" alt="Trumpet section" loading="lazy" />
                 <span class="mosaic-lbl">Trumpets</span>
               </div>
             </div>
@@ -249,9 +237,6 @@
         </figure>
       </section>
 
-      <!-- ══════════════════════════════
-           IV — THE MUSIC
-           ══════════════════════════════ -->
       <section class="score-section" id="music">
         <span class="rehearsal-mark" aria-hidden="true">IV</span>
         <p class="score-label">— What We Play —</p>
@@ -285,15 +270,12 @@
         </div>
       </section>
 
-      <!-- ══════════════════════════════
-           V — THE CONDUCTOR
-           ══════════════════════════════ -->
       <section class="score-section" id="conductor">
         <span class="rehearsal-mark" aria-hidden="true">V</span>
         <div class="conductor-layout">
           <div class="conductor-photo-col anim-left">
             <div class="photo-frame">
-              <img src="file:///C:/Users/william.nimmo/Downloads/band/Roy.jpg" alt="Roy Anthony Jr., Music Director" loading="lazy">
+              <img src="band/Roy.jpg" alt="Roy Anthony Jr., Music Director" loading="lazy" />
             </div>
           </div>
           <div class="conductor-bio-col anim-right">
@@ -306,12 +288,9 @@
         </div>
       </section>
 
-      <!-- ══════════════════════════════
-           VI — JOIN
-           ══════════════════════════════ -->
       <section class="score-section join-section" id="join">
         <span class="rehearsal-mark" aria-hidden="true">VI</span>
-        <img src="file:///C:/Users/william.nimmo/Downloads/band/2band7.jpg" alt="" class="join-bg" aria-hidden="true" loading="lazy">
+        <img src="band/2band7.jpg" alt="" class="join-bg" aria-hidden="true" loading="lazy" />
         <div class="join-overlay" aria-hidden="true"></div>
         <div class="join-content">
           <p class="score-label">— There's a Chair for You —</p>
@@ -320,21 +299,18 @@
           <div class="rehearsal-info">
             <div class="reh-item">
               <span class="reh-lbl">Rehearsals</span>
-              <span class="reh-val">Thursday evenings · 7:00 PM</span>
+              <span class="reh-val">Thursday evenings &middot; 7:00 PM</span>
             </div>
             <div class="reh-divider" aria-hidden="true">♩</div>
             <div class="reh-item">
               <span class="reh-lbl">Location</span>
-              <span class="reh-val">East County Area · San Diego</span>
+              <span class="reh-val">East County Area &middot; San Diego</span>
             </div>
           </div>
           <a href="mailto:SDCB@cox.net" class="btn-primary btn-large">Get in Touch</a>
         </div>
       </section>
 
-      <!-- ══════════════════════════════
-           VII — SUPPORT
-           ══════════════════════════════ -->
       <section class="score-section" id="support">
         <span class="rehearsal-mark" aria-hidden="true">VII</span>
         <p class="score-label">— Keep the Music Playing —</p>
@@ -353,10 +329,10 @@
             <p class="support-desc" style="margin-top:0.75em;">To show our appreciation, donor names will be listed in our Spring and Holiday concert programs for those donating $100 or more. Individuals donating between $250–$500 will receive two (2) tickets to both concerts. Donations greater than $500 will receive four (4) tickets to both concerts.</p>
             <div style="margin-top:1.25em;">
               <form action="https://www.paypal.com/donate" method="post" target="_top">
-                <input type="hidden" name="hosted_button_id" value="X55BGYHKYFKXN">
-                <input type="hidden" name="disable-funding" value="venmo">
-                <input type="image" src="./San Diego Concert Band html_files/btn_donateCC_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button">
-                <img alt="" border="0" src="./San Diego Concert Band html_files/pixel.gif" width="1" height="1">
+                <input type="hidden" name="hosted_button_id" value="X55BGYHKYFKXN" />
+                <input type="hidden" name="disable-funding" value="venmo" />
+                <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
+                <img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1" />
               </form>
             </div>
           </div>
@@ -367,20 +343,18 @@
           </div>
         </div>
 
-        <p class="mailing-address">San Diego Concert Band · PO Box 711534 · Santee, CA 92071</p>
+        <p class="mailing-address">San Diego Concert Band &middot; PO Box 711534 &middot; Santee, CA 92071</p>
         <p class="mailing-address" style="margin-top:0.5em; font-size:0.85em; opacity:0.75;">The San Diego Concert Band is a 501(c)3 non-profit corporation and your contributions are tax deductible to the full extent of the law (TIN: 33-0499812).</p>
       </section>
 
     </main>
 
-    <!-- Right animated staff panel -->
     <aside class="staff-panel staff-panel--right" aria-hidden="true">
       <canvas id="panel-right"></canvas>
     </aside>
 
-  </div><!-- /.score-layout -->
+  </div>
 
-  <!-- ── FOOTER ────────────────────────────────────────────── -->
   <footer class="site-footer" role="contentinfo">
     <div class="footer-bar" aria-hidden="true"></div>
     <div class="footer-inner">
@@ -392,31 +366,30 @@
         </div>
       </div>
       <nav class="footer-nav" aria-label="Footer navigation">
-        <a href="file:///C:/Users/william.nimmo/Downloads/index_1.html#concerts">Concerts</a>
-        <a href="file:///C:/Users/william.nimmo/Downloads/index_1.html#about">The Band</a>
-        <a href="file:///C:/Users/william.nimmo/Downloads/index_1.html#music">Music</a>
-        <a href="file:///C:/Users/william.nimmo/Downloads/index_1.html#conductor">Conductor</a>
-        <a href="file:///C:/Users/william.nimmo/Downloads/index_1.html#join">Join</a>
-        <a href="file:///C:/Users/william.nimmo/Downloads/index_1.html#support">Support</a>
+        <a href="#concerts">Concerts</a>
+        <a href="#about">The Band</a>
+        <a href="#music">Music</a>
+        <a href="#conductor">Conductor</a>
+        <a href="#join">Join</a>
+        <a href="#support">Support</a>
       </nav>
       <div class="footer-contact">
         <a href="mailto:SDCB@cox.net" class="footer-email">SDCB@cox.net</a>
         <div class="footer-icons">
-          <a href="file:///C:/Users/william.nimmo/Downloads/index_1.html#" aria-label="Facebook" class="footer-icon">
-            <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+          <a href="#" aria-label="Facebook" class="footer-icon">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
           </a>
-          <a href="file:///C:/Users/william.nimmo/Downloads/index_1.html#" aria-label="YouTube" class="footer-icon">
-            <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20" aria-hidden="true"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 1.96A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.95A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"></path><polygon fill="#080808" points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"></polygon></svg>
+          <a href="#" aria-label="YouTube" class="footer-icon">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20" aria-hidden="true"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 1.96A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.95A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon fill="#080808" points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"/></svg>
           </a>
         </div>
       </div>
     </div>
-    <div class="footer-copy">© 2026 The San Diego Concert Band · All Rights Reserved</div>
+    <div class="footer-copy">&copy; 2026 The San Diego Concert Band &middot; All Rights Reserved</div>
   </footer>
 
-  <script src="file:///C:/Users/william.nimmo/Downloads/js/canvas.js"></script>
-  <script src="file:///C:/Users/william.nimmo/Downloads/js/scroll.js"></script>
-  <script src="file:///C:/Users/william.nimmo/Downloads/js/main.js"></script>
-
-
-</body></html>
+  <script src="js/canvas.js"></script>
+  <script src="js/scroll.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
