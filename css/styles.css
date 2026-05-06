@@ -510,7 +510,7 @@ ul  { list-style: none; }
 /* ── SUPPORT ─────────────────────────────────────────────────── */
 .support-grid {
   display: grid;
-   grid-columns: repeat(2, 1fr);
+   grid-template-columns: repeat(2, 1fr);
   gap: 1.1rem; margin-bottom: 2.5rem;
 }
 .support-card {
