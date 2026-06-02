@@ -162,8 +162,8 @@ ul  { list-style: none; }
 /* Section label */
 .score-label {
   font-family: 'Cormorant Garamond', serif;
-  font-style: italic; font-size: 1.05rem; font-weight: 300;
-  color: var(--gold); letter-spacing: 0.04em;
+  font-style: italic; font-size: 1.15rem; font-weight: 600;
+  color: #e0b84a; letter-spacing: 0.04em;
   display: block; margin-bottom: 0.55rem;
 }
 
@@ -468,9 +468,9 @@ ul  { list-style: none; }
 /* ── JOIN ────────────────────────────────────────────────────── */
 .join-section {
   position: relative; overflow: hidden;
-  text-align: center; min-height: 65vh;
+  text-align: left; min-height: 65vh;
   display: flex; flex-direction: column;
-  justify-content: center; align-items: center;
+  justify-content: center; align-items: flex-start;
 }
 .join-bg {
   position: absolute; inset: 0; width: 100%; height: 100%;
@@ -493,7 +493,7 @@ ul  { list-style: none; }
 }
 .rehearsal-info {
   display: flex; align-items: center; gap: 1.8rem;
-  justify-content: center; flex-wrap: wrap; margin-bottom: 2.5rem;
+  justify-content: flex-start; flex-wrap: wrap; margin-bottom: 2.5rem;
 }
 .reh-item { display: flex; flex-direction: column; gap: 0.2rem; }
 .reh-lbl {
