@@ -809,8 +809,9 @@ ul  { list-style: none; }
   .union-text-main { font-size: 2.2rem; }
 }
 /* ── PAST CONCERTS ───────────────────────────────────────────── */
-.concert-card.past {
-  opacity: 0.25;
+.concert-card.past,
+.concert-card.past.anim-up.in {
+  opacity: 0.25 !important;
   filter: grayscale(1) brightness(0.6);
   pointer-events: none;
   border-left-color: rgba(201,168,76,0.2);
