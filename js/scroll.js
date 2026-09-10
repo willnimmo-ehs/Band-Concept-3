@@ -32,7 +32,9 @@
   const revealObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (!entry.isIntersecting) return;
-      entry.target.classList.add('in');
+      if (!entry.target.closest('.concert-card.past')) {
+        entry.target.classList.add('in');
+      }
       revealObserver.unobserve(entry.target);
     });
   }, { threshold: 0.10 });
