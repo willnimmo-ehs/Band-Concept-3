@@ -444,6 +444,22 @@
     <div class="footer-copy">&copy; 2026 The San Diego Concert Band &middot; All Rights Reserved</div>
   </footer>
 
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      document.querySelectorAll('.concert-card.past').forEach(function(card) {
+        card.style.setProperty('opacity', '0.25', 'important');
+        card.style.setProperty('filter', 'grayscale(1) brightness(0.6)', 'important');
+        card.style.setProperty('pointer-events', 'none', 'important');
+      });
+
+      setTimeout(function() {
+        document.querySelectorAll('.concert-card.past').forEach(function(card) {
+          card.style.setProperty('opacity', '0.25', 'important');
+          card.style.setProperty('filter', 'grayscale(1) brightness(0.6)', 'important');
+        });
+      }, 2000);
+    });
+  </script>
   <script src="js/canvas.js"></script>
   <script src="js/scroll.js"></script>
   <script src="js/main.js"></script>
