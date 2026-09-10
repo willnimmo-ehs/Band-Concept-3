@@ -810,23 +810,19 @@ ul  { list-style: none; }
 }
 /* ── PAST CONCERTS ───────────────────────────────────────────── */
 .concert-card.past {
-  opacity: 0.28;
-  filter: grayscale(1);
+  opacity: 0.25;
+  filter: grayscale(1) brightness(0.6);
   pointer-events: none;
+  border-left-color: rgba(201,168,76,0.2);
 }
 .concert-grid-wrap {
   position: relative;
 }
 .concert-thankyou {
-  position: absolute;
-  inset: 0;
-  z-index: 10;
+  margin-bottom: 2rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(8,8,8,0.72);
-  border-radius: var(--r);
-  backdrop-filter: blur(2px);
 }
 .concert-thankyou-inner {
   text-align: center;
@@ -834,8 +830,9 @@ ul  { list-style: none; }
   border: 1px solid var(--gold-line);
   border-top: 2px solid var(--gold);
   border-radius: var(--r);
-  background: rgba(8,8,8,0.82);
-  max-width: 480px;
+  background: rgba(201,168,76,0.022);
+  max-width: 560px;
+  width: 100%;
 }
 .concert-thankyou-clef {
   font-size: 2.2rem;
